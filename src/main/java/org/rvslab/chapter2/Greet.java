@@ -1,6 +1,8 @@
 package org.rvslab.chapter2;
 
-public class Greet {
+import org.springframework.hateoas.ResourceSupport;
+
+public class Greet extends ResourceSupport{
 	private String message;
 	Greet(){
 		

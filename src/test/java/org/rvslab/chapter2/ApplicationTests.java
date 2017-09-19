@@ -24,7 +24,7 @@ public class ApplicationTests {
 	public void testVanillaService() {
 		Greet greet = restTemplate.getForObject("/Hello", Greet.class);
 		
-		assertEquals("Hello World!", greet.getMessage());
+		assertEquals("Hello HATEOAS", greet.getMessage());
 	}
 
 }

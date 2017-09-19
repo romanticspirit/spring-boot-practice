@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class GreetingController {
 	@RequestMapping("/Hello")
 	HttpEntity<Greet> greeting(@RequestParam(value="name", required=false, defaultValue = "HATEOAS")String name) {
-		Greet greet = new Greet("Hello" + name);
+		Greet greet = new Greet("Hello " + name);
 		greet.add(ControllerLinkBuilder.linkTo(ControllerLinkBuilder.methodOn(GreetingController.class).greeting(name)).withSelfRel());
 		return new ResponseEntity<Greet>(greet, HttpStatus.OK);
 	}
